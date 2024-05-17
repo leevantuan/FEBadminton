@@ -1,0 +1,66 @@
+<div class="product-create">
+  <div class="product-create-header"><h2>Create product</h2></div>
+  <hr />
+  <div class="product-create-content">
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" [(ngModel)]="nameValue" />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <div class="d-flex justify-content-between">
+          <label class="form-label">Category</label>
+        </div>
+        <select class="form-select" [(ngModel)]="selectedValue">
+          <option selected value="1">Choose...</option>
+          <option [value]="category.id" *ngFor="let category of listCategory">
+            {{ category.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Price Sale</label>
+        <input type="number" class="form-control" [(ngModel)]="priceValue" />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Size</label>
+        <input type="number" class="form-control" [(ngModel)]="sizeValue" />
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Quantity</label>
+        <input type="number" class="form-control" [(ngModel)]="quantityValue" />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Brand</label>
+        <input type="text" class="form-control" [(ngModel)]="brandValue" />
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Img Link</label>
+        <input type="text" class="form-control" [(ngModel)]="imgLinkValue" />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Unit</label>
+        <input type="text" class="form-control" [(ngModel)]="unitValue" />
+      </div>
+    </div>
+    <!-- Input -->
+  </div>
+  <hr />
+  <div class="product-create-footer">
+    <button (click)="onClickCancel()" class="cancel-btn">Cancel</button>
+    <button (click)="onClickCreate()" class="success-btn">Create</button>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="be-container">
+  <div class="modal-create" [hidden]="isOpen">
+    <app-be-purchase-create
+      (onClickCloseCreate)="clickCloseModalCreate()"
+    ></app-be-purchase-create>
+  </div>
+  <div class="modal-create" [hidden]="isOpenDetail">
+    <app-be-purchase-detail
+      [idProduct]="id"
+      (onClickCloseDetail)="clickCloseModalDetail()"
+    ></app-be-purchase-detail>
+  </div>
+  <div class="be-nav-bar">
+    <h2>BADMINTON</h2>
+    <ul>
+      <li>Thống kê</li>
+      <li (click)="clickProduct()">Sản phẩm</li>
+      <li (click)="clickCategory()">Thể loại</li>
+      <li (click)="clickCourt()">Sân cầu</li>
+      <li (click)="clickPurchase()" class="active">Nhập hàng</li>
+      <li (click)="clickSupplier()">Nhà cung cấp</li>
+      <li (click)="clickSale()">Giảm giá</li>
+      <li (click)="clickOrder()">Đơn hàng</li>
+      <li (click)="clickBooking()">Đặt sân</li>
+      <li (click)="clickBill()">Tính tiền</li>
+      <li (click)="clickUser()">Người dùng</li>
+      <li>Đăng xuất</li>
+    </ul>
+  </div>
+  <div class="be-content">
+    <app-be-purchase-content
+      (onClickOpenCreate)="clickOpenModalCreate()"
+      (onClickOpenDetail)="clickOpenModalDetail($event)"
+    ></app-be-purchase-content>
+  </div>
+</div>

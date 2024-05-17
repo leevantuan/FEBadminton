@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+  font-family: "Poppins", sans-serif;
+}
+.cursor {
+  cursor: pointer;
+}
+
+// sliced carousel customer ====
+
+.slick-dots {
+  display: none !important;
+}
+
+//customer best sale
+.customer-carousel {
+  > .slick-prev {
+    left: 16px !important;
+    z-index: 99 !important;
+  }
+  > .slick-next {
+    right: 16px !important;
+    z-index: 99 !important;
+  }
+}
+
+.customer-sliced {
+  > .slick-prev {
+    left: 10px !important;
+    z-index: 99 !important;
+    display: none !important;
+  }
+  > .slick-next {
+    right: 16px !important;
+    z-index: 99 !important;
+    display: none !important;
+  }
+}
+
+//filter
+.mdc-checkbox {
+  margin-right: 16px !important;
+}
+
+//pagination
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: rgba(230, 194, 35, 0.7725490196) !important;
+  color: #fefefe;
+  cursor: default;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}

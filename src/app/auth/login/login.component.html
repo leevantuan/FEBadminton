@@ -1,0 +1,70 @@
+<div class="container-login">
+  <div class="main-login rounded-3">
+    <h1 class="title">SIGN IN</h1>
+    <div>
+      <!-- your email -->
+      <div class="col-auto">
+        <label for="exampleInputEmail1" class="form-label">Your Email</label>
+        <div class="input-group">
+          <div class="input-group-text">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+          </div>
+          <input
+            #inputElementEmail
+            type="text"
+            class="form-control"
+            placeholder="example@gmail.com"
+            (input)="changeInputEmail(inputElementEmail)"
+          />
+        </div>
+      </div>
+
+      <!-- your pass -->
+      <div class="col-auto mt-4">
+        <label for="exampleInputEmail1" class="form-label">Your Password</label>
+        <div class="input-group">
+          <div class="input-group-text">
+            <fa-icon [icon]="faLock"></fa-icon>
+          </div>
+          <input
+            #inputElementPassword
+            type="password"
+            class="form-control"
+            placeholder="password"
+            (input)="changeInputPassword(inputElementPassword)"
+          />
+        </div>
+      </div>
+
+      <!-- remember me -->
+      <div class="remember-forget mt-4 color-base">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" />
+          <label class="form-check-label" for="autoSizingCheck2">
+            Remember me
+          </label>
+        </div>
+
+        <a class="cursor color-base" (click)="clickForgetAccount()"
+          >Forget password?</a
+        >
+      </div>
+
+      <button
+        class="btn btn-primary customer-btn-login mt-4 bgc-base"
+        (click)="onClickLogin()"
+      >
+        Login
+      </button>
+
+      <div class="registered mt-4">
+        <p>
+          Not registered?
+          <a class="link color-base cursor" (click)="clickCreateAccount()">
+            Create account
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

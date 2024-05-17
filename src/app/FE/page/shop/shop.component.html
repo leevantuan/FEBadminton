@@ -1,0 +1,101 @@
+<app-header></app-header>
+<carousel></carousel>
+<main class="shop-container">
+  <app-logoes></app-logoes>
+  <div class="shop-content">
+    <div class="shop-filter">
+      <div class="title-text">
+        <a class="cursor">BỘ LỌC</a>
+      </div>
+      <!-- find -->
+      <div class="find">
+        <h5 class="mt-5 color-cam">Tìm kiếm từ khóa</h5>
+        <div class="input-group mb-3 mt-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nhập từ khóa .."
+          />
+          <button class="btn btn-outline-secondary" type="button">
+            <fa-icon [icon]="faSearch" class="cursor"></fa-icon>
+          </button>
+        </div>
+      </div>
+      <!-- filter -->
+      <div class="filter-Price">
+        <h5 class="mt-4 color-cam">Mức giá</h5>
+        <!-- test material -->
+        <section class="example-section">
+          <span class="example-list-section">
+            <ul>
+              @for (task of tasks; track tasks) {
+              <li>
+                <mat-checkbox
+                  [(ngModel)]="task.completed"
+                  (ngModelChange)="updateAllComplete()"
+                >
+                  {{ task.name }}
+                </mat-checkbox>
+              </li>
+              }
+            </ul>
+          </span>
+        </section>
+        <!-- test material -->
+      </div>
+      <div class="filter-Brand">
+        <h5 class="mt-4 color-cam">Thương hiệu</h5>
+        <section class="example-section">
+          <span class="example-list-section">
+            <ul>
+              @for (task of tasks; track tasks) {
+              <li>
+                <mat-checkbox
+                  [(ngModel)]="task.completed"
+                  (ngModelChange)="updateAllComplete()"
+                >
+                  {{ task.name }}
+                </mat-checkbox>
+              </li>
+              }
+            </ul>
+          </span>
+        </section>
+      </div>
+      <div class="filter-Size">
+        <h5 class="mt-4 color-cam">Size</h5>
+        <section class="example-section">
+          <span class="example-list-section">
+            <ul>
+              @for (task of tasks; track tasks) {
+              <li>
+                <mat-checkbox
+                  [(ngModel)]="task.completed"
+                  (ngModelChange)="updateAllComplete()"
+                >
+                  {{ task.name }}
+                </mat-checkbox>
+              </li>
+              }
+            </ul>
+          </span>
+        </section>
+      </div>
+    </div>
+    <div class="shop-product">
+      <div class="title-text">
+        <a class="cursor">TẤT CẢ SẢN PHẨM</a>
+      </div>
+      <div class="products-list">
+        <div class="item" *ngFor="let product of products">
+          <img [src]="product.img" />
+          <p>{{ product.name }}</p>
+          <h6>Price: {{ product.price }} vnđ</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-booking-contact></app-booking-contact>
+  <app-logoes></app-logoes>
+</main>
+<app-footer></app-footer>

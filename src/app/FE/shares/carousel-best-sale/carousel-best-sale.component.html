@@ -1,0 +1,22 @@
+<!-- You can now use your library component in app.component.html -->
+<div class="best-sale-container">
+  <ngx-slick-carousel
+    class="carousel customer-carousel"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)"
+    (afterChange)="afterChange($event)"
+    (beforeChange)="beforeChange($event)"
+  >
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem class="slide item">
+      <img src="{{ slide.img }}" alt="" />
+      <p class="item-name ps-3 pe-3 mt-2">{{ slide.name }}</p>
+      <p class="item-price ps-3 pe-3 text-danger fw-bold">
+        Price: {{ slide.price }} vnđ
+      </p>
+    </div>
+    }
+  </ngx-slick-carousel>
+</div>

@@ -1,0 +1,74 @@
+<div class="product-create">
+  <div class="product-create-header"><h2>Detail Court</h2></div>
+  <hr />
+  <div class="product-create-content">
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="nameValue"
+          [disabled]="disabled"
+        />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Status</label>
+        <select
+          class="form-select"
+          [(ngModel)]="isStatusValue"
+          [disabled]="disabled"
+        >
+          <option [value]="1">True</option>
+          <option [value]="0">False</option>
+        </select>
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="priceValue"
+          [disabled]="disabled"
+        />
+      </div>
+    </div>
+    <!-- Input -->
+  </div>
+  <hr />
+  <div class="product-create-footer">
+    <button
+      (click)="onClickCancel()"
+      class="cancel-btn btn-customer"
+      [hidden]="hiddenBtnDetail"
+    >
+      Cancel
+    </button>
+    <button
+      (click)="onClickCancelEdit()"
+      class="cancel-btn btn-customer"
+      [hidden]="hiddenBtnUpdate"
+    >
+      Cancel Edit
+    </button>
+    <button
+      (click)="onClickEdit()"
+      class="edit-btn btn-customer"
+      [hidden]="hiddenBtnDetail"
+    >
+      Edit
+    </button>
+    <button
+      (click)="onClickUpdate()"
+      class="success-btn btn-customer"
+      [hidden]="hiddenBtnUpdate"
+    >
+      Update
+    </button>
+  </div>
+</div>

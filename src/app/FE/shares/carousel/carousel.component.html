@@ -1,0 +1,16 @@
+<!-- You can now use your library component in app.component.html -->
+<ngx-slick-carousel
+  class="carousel customer-sliced"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+  (init)="slickInit($event)"
+  (breakpoint)="breakpoint($event)"
+  (afterChange)="afterChange($event)"
+  (beforeChange)="beforeChange($event)"
+>
+  @for (slide of slides; track slide.img) {
+  <div ngxSlickItem class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%" />
+  </div>
+  }
+</ngx-slick-carousel>

@@ -1,0 +1,26 @@
+.logo-main {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 32px auto;
+  display: flex;
+  list-style: none;
+  > li {
+    width: 250px;
+    height: 40px;
+    > img {
+      width: 40%;
+    }
+    > p {
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 1.2rem;
+      line-height: 40px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.color-mizuno {
+  color: #1f5490;
+}

@@ -1,0 +1,47 @@
+.profile-container {
+  width: 1200px;
+  height: 600px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  .left-profile {
+    width: 250px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    > li {
+      display: block;
+      font-size: 18px;
+      padding: 16px 24px;
+      text-decoration: none;
+      border-bottom: 1px solid #55555552;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: #e6c223c5;
+      }
+    }
+  }
+  .right-profile {
+    width: 900px;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    > h3 {
+      font-weight: bolder;
+      color: #1f2937;
+      text-decoration: none;
+      box-shadow: 0 3px #1f2937;
+      padding: 4px;
+    }
+    > .content {
+      display: flex;
+    }
+  }
+}

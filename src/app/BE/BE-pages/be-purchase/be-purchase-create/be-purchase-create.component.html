@@ -1,0 +1,57 @@
+<div class="product-create">
+  <div class="product-create-header"><h2>Create purchase</h2></div>
+  <hr />
+  <div class="product-create-content">
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <div class="d-flex justify-content-between">
+          <label class="form-label">Product Name</label>
+        </div>
+        <select class="form-select" [(ngModel)]="productNameValue">
+          <option selected value="1">Choose...</option>
+          <option [value]="product.id" *ngFor="let product of listProduct">
+            {{ product.name }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <div class="d-flex justify-content-between">
+          <label class="form-label">Supplier Name</label>
+        </div>
+        <select class="form-select" [(ngModel)]="supplierNameValue">
+          <option selected value="1">Choose...</option>
+          <option [value]="supplier.id" *ngFor="let supplier of listSupplier">
+            {{ supplier.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Quantity</label>
+        <input type="number" class="form-control" [(ngModel)]="quantityValue" />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" [(ngModel)]="priceValue" />
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">User Id</label>
+        <input type="number" class="form-control" disabled="" />
+      </div>
+    </div>
+    <!-- Input -->
+  </div>
+  <hr />
+  <div class="product-create-footer">
+    <button (click)="onClickCancel()" class="cancel-btn">Cancel</button>
+    <button (click)="onClickCreate()" class="success-btn">Create</button>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<app-header></app-header>
+<main>
+  <carousel></carousel>
+  <app-logoes></app-logoes>
+
+  <!--main -->
+  <div class="main-container">
+    <!--product best sale -->
+    <div class="product-best-sale">
+      <div class="title-text">
+        <a class="cursor">BÁN CHẠY NHẤT</a>
+      </div>
+      <carousel-best-sale></carousel-best-sale>
+    </div>
+
+    <!--product by category -->
+    <div class="mt-3">
+      <div class="title-text">
+        <a class="cursor">LOẠI SẢN PHẨM</a>
+      </div>
+      <div class="main-category mt-5">
+        <div
+          class="category-item cursor"
+          *ngFor="let category of listCategories"
+        >
+          <img [src]="category.img" />
+          <p class="title-category">{{ category.name }}</p>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vot cau long -->
+    <div class="mt-3">
+      <div class="title-text">
+        <a class="cursor">VỢT CẦU LÔNG</a>
+      </div>
+      <div class="main-votcaulong mt-5">
+        <div class="poster cursor">
+          <img
+            src="	https://fbshop.vn/wp-content/uploads/2024/01/Artboard-5-copy-2@2x.webp"
+          />
+        </div>
+        <div class="products ms-3">
+          <div class="product" *ngFor="let product of listProductVot">
+            <img [src]="product.img" />
+            <p>{{ product.name }}</p>
+            <h6>Price: {{ product.price }} vnđ</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- giay cau long -->
+    <div class="mt-5">
+      <div class="title-text">
+        <a class="cursor">GIÀY CẦU LÔNG</a>
+      </div>
+      <div class="main-votcaulong mt-5">
+        <div class="products me-3">
+          <div class="product" *ngFor="let product of listProductVot">
+            <img [src]="product.img" />
+            <p>{{ product.name }}</p>
+            <h6>Price: {{ product.price }} vnđ</h6>
+          </div>
+        </div>
+        <div class="poster cursor">
+          <img
+            src="	https://fbshop.vn/wp-content/uploads/2024/01/Banner-website-balo.webp"
+          />
+        </div>
+      </div>
+    </div>
+
+    <app-booking-contact></app-booking-contact>
+    <app-logoes></app-logoes>
+  </div>
+</main>
+<app-footer></app-footer>

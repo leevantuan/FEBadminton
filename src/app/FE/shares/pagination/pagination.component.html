@@ -1,0 +1,21 @@
+<div class="container">
+  <p
+    *ngFor="
+      let post of POSTS
+        | paginate
+          : {
+              itemsPerPage: tableSize,
+              currentPage: page,
+              totalItems: count
+            };
+      let i = index
+    "
+  ></p>
+  <div>
+    <pagination-controls
+      previousLabel="Prev"
+      nextLabel="Next"
+      (pageChange)="onTableDataChange($event)"
+    ></pagination-controls>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="product-create">
+  <div class="product-create-header"><h2>Detail product</h2></div>
+  <hr />
+  <div class="product-create-content">
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <div class="d-flex justify-content-between">
+          <label class="form-label">Product Name</label>
+        </div>
+        <select
+          class="form-select"
+          [(ngModel)]="productNameValue"
+          disabled="true"
+        >
+          <option selected value="1">Choose...</option>
+          <option [value]="product.id" *ngFor="let product of listProduct">
+            {{ product.name }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <div class="d-flex justify-content-between">
+          <label class="form-label">Supplier Name</label>
+        </div>
+        <select
+          class="form-select"
+          [(ngModel)]="supplierNameValue"
+          disabled="true"
+        >
+          <option selected value="1">Choose...</option>
+          <option [value]="supplier.id" *ngFor="let supplier of listSupplier">
+            {{ supplier.name }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <!-- Input -->
+    <!-- Input -->
+    <div class="d-flex justify-content-between">
+      <div class="mb-3 input-size">
+        <label class="form-label">Quantity</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="quantityValue"
+          disabled="true"
+        />
+      </div>
+      <div class="mb-3 ms-4 input-size">
+        <label class="form-label">Price</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="priceValue"
+          disabled="true"
+        />
+      </div>
+    </div>
+    <!-- Input -->
+  </div>
+  <hr />
+  <div class="product-create-footer">
+    <button
+      (click)="onClickCancel()"
+      class="cancel-btn btn-customer"
+      [hidden]="hiddenBtnDetail"
+    >
+      Cancel
+    </button>
+    <button
+      (click)="onClickCancelEdit()"
+      class="cancel-btn btn-customer"
+      [hidden]="hiddenBtnUpdate"
+    >
+      Cancel Edit
+    </button>
+    <button
+      (click)="onClickDelete()"
+      class="delete-btn btn-customer"
+      [hidden]="hiddenBtnDetail"
+    >
+      Delete
+    </button>
+  </div>
+</div>

@@ -1,1 +1,36 @@
-<p>be-sale works!</p>
+<div class="be-container">
+  <div class="modal-create" [hidden]="isOpen">
+    <app-be-sale-create
+      (onClickCloseCreate)="clickCloseModalCreate()"
+    ></app-be-sale-create>
+  </div>
+  <div class="modal-create" [hidden]="isOpenDetail">
+    <app-be-sale-detail
+      [idProduct]="id"
+      (onClickCloseDetail)="clickCloseModalDetail()"
+    ></app-be-sale-detail>
+  </div>
+  <div class="be-nav-bar">
+    <h2>BADMINTON</h2>
+    <ul>
+      <li>Thống kê</li>
+      <li (click)="clickProduct()">Sản phẩm</li>
+      <li (click)="clickCategory()">Thể loại</li>
+      <li (click)="clickCourt()">Sân cầu</li>
+      <li (click)="clickPurchase()">Nhập hàng</li>
+      <li (click)="clickSupplier()">Nhà cung cấp</li>
+      <li (click)="clickSale()" class="active">Giảm giá</li>
+      <li (click)="clickOrder()">Đơn hàng</li>
+      <li (click)="clickBooking()">Đặt sân</li>
+      <li (click)="clickBill()">Tính tiền</li>
+      <li (click)="clickUser()">Người dùng</li>
+      <li>Đăng xuất</li>
+    </ul>
+  </div>
+  <div class="be-content">
+    <app-be-sale-content
+      (onClickOpenCreate)="clickOpenModalCreate()"
+      (onClickOpenDetail)="clickOpenModalDetail($event)"
+    ></app-be-sale-content>
+  </div>
+</div>

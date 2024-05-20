@@ -13,6 +13,7 @@ import { BeCategoryComponent } from './BE/BE-pages/be-category/be-category.compo
 import { BeCourtComponent } from './BE/BE-pages/be-court/be-court.component';
 import { BEPurchaseComponent } from './BE/BE-pages/be-purchase/be-purchase.component';
 import { BESupplierComponent } from './BE/BE-pages/be-supplier/be-supplier.component';
+import { BESaleComponent } from './BE/BE-pages/be-sale/be-sale.component';
 
 export const routes: Routes = [
   {
@@ -70,5 +71,9 @@ export const routes: Routes = [
   {
     path: 'backend/supplier',
     component: BESupplierComponent,
+  },
+  {
+    path: 'backend/sale',
+    component: BESaleComponent,
   },
 ];

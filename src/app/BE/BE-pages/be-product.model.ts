@@ -68,3 +68,20 @@ export interface CreatePurchaseType {
   crateAt: string;
   userId: string;
 }
+
+export interface SaleType {
+  id: string;
+  name: string;
+  startDay: string;
+  endDay: string;
+  precent: number;
+  isStatus: boolean;
+}
+
+export interface CreateSaleType {
+  name: string;
+  startDay: string;
+  endDay: string;
+  precent: number;
+  isStatus: boolean;
+}

@@ -1,1 +1,62 @@
-<p>be-sale-content works!</p>
+<div class="position-relative">
+  <h3>Danh sách khuyến mãi</h3>
+  <div class="header-content">
+    <button (click)="showModal()">Thêm mới</button>
+    <div class="find">
+      <h5 class="mt-5 color-cam">Tìm kiếm từ khóa</h5>
+      <div class="input-group mb-3 mt-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Nhập từ khóa .."
+          [(ngModel)]="searchInput"
+          (ngModelChange)="handleClickSearch()"
+          (keydown.enter)="handleClickSearch()"
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="handleClickSearch()"
+        >
+          <fa-icon [icon]="faSearch" class="cursor"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- table -->
+  <table class="table table-hover table-bordered container-table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">End Time</th>
+        <th scope="col">Percent</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sale of listSale">
+        <th scope="row">{{ sale.name }}</th>
+        <th scope="row">{{ sale.startDay }}</th>
+        <td>{{ sale.endDay }}</td>
+        <td>{{ sale.precent }}%</td>
+        <th scope="row">
+          {{ sale.isStatus == true ? "Còn khuyến mãi" : "Ngưng khuyến mãi" }}
+        </th>
+        <td>
+          <button class="button-detail" (click)="onClickDetail(sale.id)">
+            Detail
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- table -->
+  <div class="mt-3 pagination-center">
+    <pagination
+      [totalPage]="totalPage"
+      (onChangePageNumber)="changePageNumber($event)"
+    ></pagination>
+  </div>
+</div>
